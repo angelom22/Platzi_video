@@ -1,0 +1,533 @@
+body {
+  margin: 0;
+  font-family: 'Muli', sans-serif;
+  background: #8f57fd;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+/*ESTILOS DEL HEADER*/
+.header--loggin {
+  align-items: center;
+  background-color: #21C08B;
+  color: white;
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  top: 0px;
+  width: 100%;
+}
+.header__img--loggin {
+  margin-left: 30px;
+  width: 200px;
+}
+.header--register {
+  align-items: center;
+  background-color: #AB88FF;
+  color: white;
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  top: 0px;
+  width: 100%;
+}
+.header__img--register {
+  margin-left: 30px;
+  width: 200px;
+}
+
+.header {
+  align-items: center;
+  background: #8f57fd;
+  color: white;
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  top: 0px;
+  width: 100%;
+}
+
+.header__img {
+  margin-left: 30px;
+  width: 200px;
+}
+
+.header__menu {
+	margin-right: 30px;
+}
+
+.header__menu ul {
+  display: none;
+  list-style: none;
+  margin: 0px 0px 0px -14px;
+  padding: 0px;
+  position: absolute;
+  width: 100px;
+  text-align: right;
+}
+
+.header__menu:hover ul, ul:hover {
+	display: block;
+}
+
+.header__menu li {
+  margin: 10px 0px;
+}
+
+.header__menu li a {
+  color: white;
+  text-decoration: none;
+}
+
+.header__menu li a:hover {
+  text-decoration: underline;
+}
+
+.header__menu--profile {
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+}
+
+.header__menu--profile img {
+  margin-right: 8px;
+  width: 40px;
+}
+
+/*ESTILOS DEL LOGGIN*/
+.login {
+  background: linear-gradient(#21C08B, #AB88FF);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px 0px;
+  min-height: calc(100vh - 300px);
+}
+.login--register {
+  background: linear-gradient(#AB88FF, #21C08B);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px 0px;
+  min-height: calc(100vh - 300px);
+}
+.login__container {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid white;
+  border-radius: 40px;
+  color: white;
+  padding: 60px 68px 40px;
+  min-height: 500px;
+  width: 300px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.login__container--title {
+    text-align: center;
+}
+.login__container--form {
+  display: flex;
+  flex-direction: column;
+}
+.login__container--form label {
+  font-size: 14px;
+}
+.login__container--remember-me {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.login__container--remember-me a {
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+}
+.login__container--remember-me a:hover {
+  text-decoration: underline;
+}
+.login__container--social-media > div {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.login__container--social-media > div > img {
+  width: 30px;
+  margin-right: 10px;
+}
+.login__container--register {
+  font-size: 14px;  
+  text-align: center;
+}
+.login__container--register a {
+  color: white;
+  font-weight: bold;
+  font-size: 16px;  
+  text-decoration: none;
+}
+.login__container--register a:hover {
+  text-decoration: underline;
+}
+
+/*ESTILOS DEL CONTENIDO PRINCIPAL*/
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 300px;
+  border-radius: 0px 0px 40px 40px;
+}
+
+.main__title {
+  color: white;
+  font-size: 25px;
+}
+
+.categories__title {
+  color: white;
+  font-size: 16px;
+  position: absolute;
+  padding-left: 30px;
+  width: 100%;
+}
+
+.carousel {
+  overflow: scroll;
+  padding-left: 30px;
+  width: 100%;
+  position: relative;
+}
+
+.carousel__container {
+  transition: 450ms -webkit-transform;
+  transition: 450ms transform;
+  transition: 450ms transform, 450ms -webkit-transform;
+  font-size: 0;
+  white-space: nowrap;
+  margin: 70px 0px;
+  padding-bottom: 10px;
+}
+
+.carousel__container:hover .carousel-item {
+  opacity: 0.3;
+}
+
+.carousel__container:hover .carousel-item:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  opacity: 1;
+}
+
+.carousel-item {
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 250px;
+  margin-right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 450ms all;
+  -webkit-transform-origin: center left;
+          transform-origin: center left;
+}
+
+.carousel-item:hover ~ .carousel-item {
+  -webkit-transform: translate3d(100px, 0, 0);
+          transform: translate3d(100px, 0, 0);
+}
+
+.carousel-item__img {
+  width: 200px;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.carousel-item__details {
+  align-items: flex-start;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+  bottom: 0;
+  display: flex;
+  font-size: 10px;
+  flex-direction: column;
+  justify-content: flex-end;
+  left: 0;
+  opacity: 0;
+  transition: 450ms opacity;
+  padding: 10px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.carousel-item__details--img {
+  width: 20px;
+}
+
+.carousel-item:hover .carousel-item__details {
+  opacity: 1;
+}
+
+.carousel-item__details--title {
+  color: white;
+  margin: 5px 0px 0px 0px;
+}
+
+.carousel-item__details--subtitle {
+  color: white;
+  font-size: 8px;
+  margin: 3px 0px;
+}
+
+.input {
+  background-color: rgba(255,255,255,0.1);
+  border: 2px solid white;
+  border-radius: 25px;
+  color: white;
+  font-family: 'Muli', sans-serif;
+  font-size: 16px;
+  height: 50px;
+  margin-bottom: 20px;
+  outline: none;
+  padding: 0px 20px;
+  width: 70%;
+}
+.input--from {
+  background-color: transparent;
+  border-left: 0px;
+  border-top: 0px;
+  border-right: 0px;
+  border-bottom: 2px solid white;
+  font-size: 16px;
+  font-family: 'Muli', sans-serif;
+  margin-bottom: 20px;
+  padding: 0px 20px;
+  outline: none;
+  height: 50px;
+}
+::placeholder {
+  color: white;
+}
+.button {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;  
+  font-weight: bold; 
+  font-family: 'Muli', sans-serif;
+  height: 50px;
+  letter-spacing: 1px;
+  margin: 10px 0px;
+  outline: none;
+}
+.button:hover {
+  background-color: #ccc;
+}
+/*ESTILOS DEL FOOTER*/
+.footer {
+  align-items: center;
+  background-color: #8f57fd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100%;
+}
+
+.footer a {
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  padding-left: 30px;
+  text-decoration: none;  
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer--loggin {
+  background-color: #AB88FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100%;
+}
+.footer--loggin a {
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  padding-left: 30px;
+  text-decoration: none;  
+}
+.footer--loggin a:hover {
+  text-decoration: underline; 
+}
+.footer--register {
+  background-color: #21C08B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100%;
+}
+.footer--register a {
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  padding-left: 30px;
+  text-decoration: none;  
+}
+.footer--register a:hover {
+  text-decoration: underline; 
+}
+
+
+/* The checkbox container */
+.checkbox__container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.checkbox__container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #AB88FF;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox__container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.checkbox__container input:checked ~ .checkmark {
+  background-color: #21C08B;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: " ";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.checkbox__container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.checkbox__container .checkmark:after {
+ 	top: 6px;
+	left: 6px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+/* Estilos del Not Found 404 */
+.not-found {
+  background: linear-gradient(#21C08B, #AB88FF);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px 0px;
+  min-height: 100vh;
+  color: white;
+}
+
+.not-found h1 {
+  font-size: 100px;
+}
+
+.text-notfound {
+  text-align: center;
+  margin-top: 56px;
+  color: #fff;
+  font-size: 1em;
+  /* font-family: sans-serif; */
+  text-transform: uppercase;
+}
+
+.animated {
+  animation-duration: 2.5s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+@keyframes hinge {
+  0% {transform: rotate(0);transform-origin: top left;animation-timing-function: ease-in-out;}
+  20%, 60% {transform: rotate(80deg);transform-origin: top left;animation-timing-function: ease-in-out;}
+  40% {transform: rotate(60deg);transform-origin: top left;animation-timing-function: ease-in-out;}
+  80% {transform: rotate(60deg) translateY(0);transform-origin: top left;animation-timing-function: ease-in-out;}
+  100% {transform: translateY(700px);}
+}
+.hinge {
+  /* margin: 10px; */
+  animation-name: hinge;
+}
+
+
+/* Media queris */
+@media only screen and (max-width: 600px) {
+    .main__description--title {
+      font-size: 30px;
+    }
+    .login__container {
+      background-color: transparent;
+      border: none;
+      padding: 0px;
+      width: 100%;
+    }
+    .footer {
+      align-items: center;
+      flex-direction: column;
+    }
+    .footer--loggin {
+      align-items: center;
+      flex-direction: column;
+    }
+    .footer--register {
+      align-items: center;
+      flex-direction: column;
+    }
+    .text-notfound {
+      margin-top: 10px; 
+     }
+     
+}
